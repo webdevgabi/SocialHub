@@ -16,6 +16,8 @@ Finally you can start the application, which must be done on both client and bac
 - **Backend:**
     - Express 4.19.2 ([official documentation](https://expressjs.com/))
     - Nodemon 3.1.0 ([official documentation](https://nodemon.io/))
+    - MongoDB 6.5.0 ([official documentation](https://www.mongodb.com/docs/drivers/node/current/))
 - **Frontend:**
     - Vite 5.2.0 ([documentation](https://vitejs.dev/))
     - React 18.2.0 ([documentation](https://legacy.reactjs.org/))
+    - React Rooter Dom 6.22.3 ([documentation](https://reactrouter.com/en/main))

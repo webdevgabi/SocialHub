@@ -1,0 +1,74 @@
+#register {
+    width: 100%;
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);    }
+
+.container {
+    padding: 30px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+    width: 500px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.input {
+    width: fit-content;
+}
+
+.input label {
+    position: absolute;
+    padding: 5px 0px 0px 15px;
+    font-size: 13px;
+    z-index: 1000;
+}
+
+.input input {
+    padding: 30px 0px 5px 10px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+}
+
+input:focus {
+    transform: scale(1.05);
+}
+
+button {
+    background: #252525;
+    color: #F5F5F5;
+    border-bottom: 2px solid black;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    display: block;
+    margin: 30px auto 0px auto;
+    border-radius: 5px;
+}
+
+@media screen AND (max-width: 431px) {
+    input, .input {
+        width: 100%;
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0px;
+    }
+}

@@ -1,8 +1,14 @@
 module.exports = {
-    name: {
+    username: {
         isRequired: true,
         onlyLetter: true,
         length: 4,
+        isInUse: true
+    },
+    displayName: {
+        isRequired: true,
+        onlyLetter: true,
+        length: 4
     },
     email: {
         isRequired: true,

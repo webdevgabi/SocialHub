@@ -13,7 +13,7 @@ module.exports = async (data, { isRequired, isEmailFormat, isInUse }) => {
     }
 
     const isEmail = emailRegex.test(data)
-    if(isEmailFormat && isEmail) {
-        return ["Email address format is incorrect. Please check."]
+    if(isEmailFormat && !isEmail) {
+        return ["Email address format is incorrect."]
     }
 }

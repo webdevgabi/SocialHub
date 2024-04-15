@@ -16,22 +16,22 @@ module.exports = (data, { isRequired, length, isContainCapital, isContainLower, 
     }
 
     const containCapital = capitalRegex.test(data)
-    if(isContainCapital && containCapital) {
+    if(isContainCapital && !containCapital) {
         errors.push("Password must contain at least one capital letter")
     }
 
     const containLower = lowerRegex.test(data)
-    if(isContainLower && containLower) {
+    if(isContainLower && !containLower) {
         errors.push("Password must contain at least one small letter")
     }
 
     const containNumber = numberRegex.test(data)
-    if(isContainNumber && containNumber) {
+    if(isContainNumber && !containNumber) {
         errors.push("Password must contain at least one number")
     }
 
     const containSpecial = specialRegex.test(data)
-    if(isContainSpecial && containSpecial) {
+    if(isContainSpecial && !containSpecial) {
         errors.push("Password must contain at least one special character")
     }
 

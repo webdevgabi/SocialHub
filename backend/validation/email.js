@@ -3,8 +3,8 @@ const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 
 module.exports = async (data, { isRequired, isEmailFormat, isInUse }) => {
     
-    if(isRequired && !data) {
-        return ["Please enter an email."]
+    if(!data) {
+        return isRequired && ["Please enter an email."]
     }
 
     const inUse = await find({ collection: 'users', condition: { email: data } })

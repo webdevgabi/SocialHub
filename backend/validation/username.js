@@ -4,8 +4,8 @@ const onlyLetterRegex = (/^[a-zA-Z0-9_]+$/)
 module.exports = async (data, { isRequired, onlyLetter, length, isInUse }) => {
     const errors = [];
 
-    if(isRequired && !data) {
-        return ["Please enter a username."]
+    if(!data) {
+        return isRequired && ["Please enter a username."]
     }
 
     const inUse = await find({ collection: 'users', condition: { username: data } })

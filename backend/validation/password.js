@@ -7,8 +7,8 @@ const numberRegex = /\d/;
 module.exports = (data, { isRequired, length, isContainCapital, isContainLower, isContainNumber, isContainSpecial }) => {
     const errors = [];
 
-    if(isRequired && !data) {
-        return ["Please enter a password."]
+    if(!data) {
+        return isRequired && ["Please enter a password."]
     }
 
     if(length && length > data.length) {

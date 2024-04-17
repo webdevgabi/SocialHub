@@ -1,19 +1,10 @@
 const router = require("express").Router()
-const validation = require("../../validation/")
 const bcrypt = require("bcrypt")
 
 const insertOne = require("../../database/insertOne")
 
-router.use(async (req, res, next) => {
-    const errors = await validation(req.body)
-    
-    if(errors) {
-        res.status(422).json(errors)
-        return;
-    }
-
-    next()
-})
+const userCreateValidation = require("../../validation/user/create")
+router.use(userCreateValidation)
 
 router.post("/", async (req, res) => {
 
@@ -24,7 +15,7 @@ router.post("/", async (req, res) => {
         displayName: displayName,
         email: email,
         password: await bcrypt.hash(password, 10),
-        tokens: [],
+        token: '',
         details: details
     }
 

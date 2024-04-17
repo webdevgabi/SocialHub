@@ -6,6 +6,8 @@ This is a full-stack application in the context of a comminity site. Here users 
 
 The application is built in [NodeJS](https://nodejs.org/en) environment, so it must first be installed on your computer.
 
+Datas are stored in a [MongoDB](https://www.mongodb.com/) database, so you need to have a database in local or cloud. The connection URL of which is specified in `main.js` in the backend folder.
+
 You should run `npm install` in the backend and frontend folders, which will download all the packages that needs for the application
 
 Finally you can start the application, which must be done on both client and backend side:
@@ -18,11 +20,11 @@ Finally you can start the application, which must be done on both client and bac
   _id: ObjectId('randomString'),
   username: 'UniqueName',
   displayName: 'Edward Example',
+  email: 'edward@example.hu',
   password: 'I am hashed', 
-  tokens: [/* list of tokens */],
+  token: 'randomString',
   details: {/* Custom data about user (birthday, ect..) */}
 }
-
 ```
 
 ## What i used
@@ -37,3 +39,4 @@ Finally you can start the application, which must be done on both client and bac
     - React 18.2.0 ([documentation](https://legacy.reactjs.org/))
     - React Rooter Dom 6.22.3 ([documentation](https://reactrouter.com/en/main))
     - Axios 1.6.8 ([documentation](https://axios-http.com/))
+    - Js-Cookie 3.0.5 ([documentation](https://www.npmjs.com/package/js-cookie))

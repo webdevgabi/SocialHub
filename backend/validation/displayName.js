@@ -4,8 +4,8 @@ const onlyLetterRegex = (/[A-Za-z0-9 _]/)
 module.exports = (data, { isRequired, onlyLetter, length }) => {
     const errors = [];
 
-    if(isRequired && !data) {
-        return ["Please enter a display name."]
+    if(!data) {
+        return isRequired && ["Please enter a display name."]
     }
 
     if(length && length > data.length) {
